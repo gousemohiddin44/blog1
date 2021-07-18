@@ -4,7 +4,7 @@ const ejs = require("ejs");
 const config = require("config");
 //const jwt = require("jsonwebtoken");
 const posts = require("./posts");
-const connectDB = require("./config/db");
+const connectDB = require("./.env/config/db");
 const User = require("./model/user.js");
 const user = require("./model/user.js");
 
