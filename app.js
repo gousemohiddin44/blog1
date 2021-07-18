@@ -122,7 +122,7 @@ app.get("/editBlog/:topic",(req,res)=>{
             res.render("editBlog",{post:post});
         }
     })
-    
+
 });
 
 app.post("/editBlog/:topic",(req,res)=>{
