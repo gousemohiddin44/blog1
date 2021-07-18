@@ -16,7 +16,7 @@ app.use(express.static(__dirname + "/public"));
 const mongoose = require("mongoose");
 const config = require("config");
 
-const db = "mongodb+srv://GouseMohiddin:Tophbeifong@67@contactkeeper.cgmm1.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+
 
 const connectDB = ()=>{
     try {
