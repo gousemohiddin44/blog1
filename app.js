@@ -4,7 +4,6 @@ const ejs = require("ejs");
 const config = require("config");
 //const jwt = require("jsonwebtoken");
 const posts = require("./posts");
-const connectDB = require("./.env/config/db");
 const User = require("./model/user.js");
 const user = require("./model/user.js");
 
@@ -13,6 +12,21 @@ const app =express();
 app.set("view engine","ejs");
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(__dirname + "/public"));
+
+const mongoose = require("mongoose");
+const config = require("config");
+
+const db = "mongodb+srv://GouseMohiddin:Tophbeifong@67@contactkeeper.cgmm1.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+
+const connectDB = ()=>{
+    try {
+        mongoose.connect(db,{useNewUrlParser:true,useCreateIndex:true,useFindAndModify:true,useUnifiedTopology: true});
+        console.log("MongoDB connected...");
+    } catch (err) {
+        console.log(err);
+        process.exit(1);
+    }
+};
 
 connectDB();
 
