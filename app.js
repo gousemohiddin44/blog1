@@ -16,6 +16,11 @@ app.use(express.static(__dirname + "/public"));
 
 connectDB();
 
+
+app.get("/",(req,res)=>{
+    res.render("Login");
+});
+
 app.get("/topic/:title",(req,res)=>{
     posts.forEach((post)=>{
         if(req.params.title===post.title){
@@ -24,9 +29,7 @@ app.get("/topic/:title",(req,res)=>{
     });
 });
 
-app.get("/",(req,res)=>{
-    res.render("Login");
-});
+
 
 
 
