@@ -1,0 +1,16 @@
+<%-include('partials/header')-%>
+
+    <div class="post-body">
+        <form action="/blog" method="POST">
+            <label> Image </label>
+            <input type="file" accept="image/*" name="imgurl">
+            <label> Title </label>
+            <input type="text" name="title">
+            <label> content </label>
+            <textarea id="" cols="30" rows="10" name="content"></textarea>
+            <button type="submit" class="btn btn-dark btn-large">Submit Blog</button>
+        </form>
+    </div>
+
+
+    <%-include('partials/footer')-%>

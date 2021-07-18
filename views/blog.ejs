@@ -1,0 +1,33 @@
+<%-include('partials/header')-%>
+
+    <div>
+        <img class="img-main" src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGVvcGxlJTIwY29tcHV0ZXJ8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80" alt="No-image">
+    </div>
+
+    <div class="row">
+        <% post.forEach(function(ele){ %>
+
+            <div class="card col-4">
+                <img src="<%= ele.imgurl %>" class="card-img-top" height="250px" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <%= ele.title %>
+                    </h5>
+                    <p class="card-text">
+                        <%= ele.content.slice(0,150)+"..." %>
+                    </p>
+                    <a class="btn btn-danger" href="/topic/<%= ele.title%>">Read more</a>
+                </div>
+            </div>
+            <% }); %>
+    </div>
+
+    <div>
+        <a href="/createBlog" class="btn btn-large btn-warning spcbtn">Add Blog</a>
+    </div>
+    <br>
+    <br>
+    <br>
+
+
+    <%-include('partials/footer')-%>

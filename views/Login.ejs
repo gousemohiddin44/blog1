@@ -1,0 +1,22 @@
+<%-include('partials/header')-%>
+
+    <div class="container">
+        <form action="/" method="post">
+            <label>Username</label>
+            <input type="email" placeholder="" name="username">
+            <label>Password</label>
+            <input type="password" placeholder="" name="password">
+            <br>
+            <button type="submit" class="login btn btn-dark">Login</button>
+        </form>
+        <br>
+        <br>
+        <h3>Don't have account?Sign Up</h3>
+        <form action="/signin" method="get">
+            <button type="submit" class="signin btn btn-dark">Sign Up</button>
+        </form>
+
+    </div>
+
+
+    <%-include('partials/footer')-%>

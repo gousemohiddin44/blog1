@@ -1,0 +1,24 @@
+<%-include('partials/header')-%>
+
+    <div class="post-body">
+        <img src="<%=post.imgurl%>" alt="No-image" width="100%;">
+        <h1>
+            <%=post.title%>
+        </h1>
+        <p>
+            <%=post.content%>
+        </p>
+    </div>
+
+    <div>
+        <a href="/delete/<%= post.title%>" class="btn btn-large btn-warning spcbtn">Delete This Blog</a>
+    </div>
+    <br>
+    <div>
+        <a href="/editBlog/<%= post.title %>" class="btn btn-large btn-warning spcbtn">Edit This Blog</a>
+    </div>
+    <br>
+    <br>
+
+
+    <%-include('partials/footer')-%>
